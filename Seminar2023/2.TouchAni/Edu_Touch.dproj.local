@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.785,D:\5sh_Delphi\Seminar2023\2.TouchAni\MUnit.fmx=D:\5sh_Delphi\Seminar2023\2.TouchAni\Unit1.fmx</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.355,=D:\5sh_Delphi\Seminar2023\2.TouchAni\Unit2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.599,D:\5sh_Delphi\Seminar2023\2.TouchAni\Unit2.pas=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.145,D:\temp\DX11\Unit4.fmx=D:\5sh_Delphi\Edu_2023\3-2\Unit1.fmx</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.423,D:\temp\DX11\Project3.dproj=D:\5sh_Delphi\Edu_2023\3-2\Edu_Touch.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.675,=D:\5sh_Delphi\Seminar2023\2.TouchAni\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.142,=D:\temp\DX11\Unit4.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.220,=D:\temp\DX11\Unit4.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.145,D:\temp\DX11\Unit4.pas=D:\5sh_Delphi\Edu_2023\3-2\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.784,D:\5sh_Delphi\Seminar2023\2.TouchAni\MUnit.pas=D:\5sh_Delphi\Seminar2023\2.TouchAni\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android64="" Android=""/>
+	</ActiveMobileDevice>
+</BorlandProject>

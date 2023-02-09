@@ -1,0 +1,1078 @@
+object MForm: TMForm
+  Left = 0
+  Top = 0
+  BorderStyle = Single
+  Caption = 'Gear Optimal Design Tool'
+  ClientHeight = 800
+  ClientWidth = 1053
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object RDToggleButtons1: TRDToggleButtons
+    Align = Top
+    HitTest = True
+    Size.Width = 1053.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    ButtonNo = 4
+    ButtonText.Strings = (
+      'GENERATE'
+      'CONFIGURE'
+      'EVALUATE'
+      'ANALYSIS')
+    TextFont.Size = 16.000000000000000000
+    ColorButton = xFF4F5E6B
+    ColorButtonText = claWhite
+    ColorTopLineOn = xFF2A7EC5
+    ColorTopLineOff = claSilver
+    ClickIndex = 0
+    OnButtonSetClick = RDToggleButtons1ButtonSetClick
+    TypeInfo = False
+  end
+  object MTabControl: TTabControl
+    Align = Client
+    Size.Width = 1053.000000000000000000
+    Size.Height = 750.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = Bottom
+    Sizes = (
+      1053s
+      724s
+      1053s
+      724s
+      1053s
+      724s
+      1053s
+      724s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 71.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem1'
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Rectangle1: TRectangle
+        Align = Client
+        Fill.Color = xFF2D2F32
+        Size.Width = 1053.000000000000000000
+        Size.Height = 724.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF4F5E6B
+        Stroke.Thickness = 10.000000000000000000
+        object Text1: TText
+          Position.X = 40.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 42.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Optimization Variable'
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF2A7EC5
+          TextSettings.HorzAlign = Leading
+        end
+      end
+      object Rectangle5: TRectangle
+        Fill.Color = xFF2D2F32
+        Position.X = 40.000000000000000000
+        Position.Y = 150.000000000000000000
+        Size.Width = 458.000000000000000000
+        Size.Height = 129.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF4F5E6B
+        object Label1: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 32.000000000000000000
+          Position.Y = 56.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'Overall speed ratio'
+          TabOrder = 0
+        end
+        object NumberBox1: TNumberBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Cursor = crIBeam
+          Value = 18.000000000000000000
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.HorzAlign = Trailing
+          Position.X = 176.000000000000000000
+          Position.Y = 56.000000000000000000
+          StyledSettings = [Family, Style, FontColor]
+        end
+        object Label2: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 1.000000000000000000
+          Position.Y = -25.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.FontColor = xFFE88C44
+          Text = 'Gearbox Settings'
+          TabOrder = 2
+        end
+      end
+      object Rectangle6: TRectangle
+        Fill.Color = xFF2D2F32
+        Position.X = 528.000000000000000000
+        Position.Y = 150.000000000000000000
+        Size.Width = 482.000000000000000000
+        Size.Height = 129.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF4F5E6B
+        object Label3: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 30.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'CD'
+          TabOrder = 7
+        end
+        object NumberBox2: TNumberBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 8
+          Cursor = crIBeam
+          Max = 200.000000000000000000
+          Value = 80.000000000000000000
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.HorzAlign = Trailing
+          Position.X = 145.000000000000000000
+          Position.Y = 16.000000000000000000
+          VertIncrement = 10.000000000000000000
+          StyledSettings = [Family, Style, FontColor]
+        end
+        object Label4: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 1.000000000000000000
+          Position.Y = -25.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.FontColor = xFFE88C44
+          Text = 'Parameter'
+          TabOrder = 9
+        end
+        object Label7: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 30.000000000000000000
+          Position.Y = 56.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'Addendum'
+          TabOrder = 2
+        end
+        object NumberBox4: TNumberBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          Cursor = crIBeam
+          DecimalDigits = 1
+          Value = 1.500000000000000000
+          ValueType = Float
+          KeyboardType = NumbersAndPunctuation
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.HorzAlign = Trailing
+          Position.X = 145.000000000000000000
+          Position.Y = 96.000000000000000000
+          HorzIncrement = 0.100000001490116100
+          VertIncrement = 1.000000000000000000
+          StyledSettings = [Family, Style, FontColor]
+        end
+        object Label8: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 30.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'DEdendum'
+          TabOrder = 0
+        end
+        object NumberBox5: TNumberBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Cursor = crIBeam
+          DecimalDigits = 1
+          Max = 200.000000000000000000
+          Value = 1.300000000000000000
+          ValueType = Float
+          KeyboardType = NumbersAndPunctuation
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.HorzAlign = Trailing
+          Position.X = 145.000000000000000000
+          Position.Y = 56.000000000000000000
+          HorzIncrement = 0.100000001490116100
+          VertIncrement = 1.000000000000000000
+          StyledSettings = [Family, Style, FontColor]
+        end
+        object Label9: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 262.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'mm'
+          TabOrder = 6
+        end
+        object Label10: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 262.000000000000000000
+          Position.Y = 60.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'prop mod'
+          TabOrder = 5
+        end
+        object Label11: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 262.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'prop mod'
+          TabOrder = 4
+        end
+      end
+      object Rectangle7: TRectangle
+        Fill.Color = xFF2D2F32
+        Position.X = 40.000000000000000000
+        Position.Y = 340.000000000000000000
+        Size.Width = 970.000000000000000000
+        Size.Height = 297.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF4F5E6B
+        object Label6: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 1.000000000000000000
+          Position.Y = -25.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.FontColor = xFFE88C44
+          Text = 'Gearset1'
+          TabOrder = 0
+        end
+        object ListBox1: TListBox
+          Position.X = 32.000000000000000000
+          Position.Y = 25.000000000000000000
+          Size.Width = 745.000000000000000000
+          Size.Height = 244.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Viewport.Width = 741.000000000000000000
+          Viewport.Height = 240.000000000000000000
+          object ListBoxItem1: TListBoxItem
+            Size.Width = 741.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            object Rectangle8: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Size.Width = 241.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label5: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Property'
+                TabOrder = 0
+              end
+            end
+            object Rectangle9: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 240.000000000000000000
+              Size.Width = 145.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label12: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Units'
+                TabOrder = 0
+              end
+            end
+            object Rectangle10: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 622.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label13: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Step'
+                TabOrder = 0
+              end
+            end
+            object Rectangle11: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 503.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label14: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Stop'
+                TabOrder = 0
+              end
+            end
+            object Rectangle12: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 384.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label15: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Start'
+                TabOrder = 0
+              end
+            end
+          end
+          object ListBoxItem3: TListBoxItem
+            Position.Y = 40.000000000000000000
+            Size.Width = 741.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            object Rectangle13: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Size.Width = 241.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label16: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                Size.Width = 196.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Trailing
+                Text = 'Speed ratio'
+                TabOrder = 0
+              end
+            end
+            object Rectangle14: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Margins.Left = -1.000000000000000000
+              Position.X = 240.000000000000000000
+              Size.Width = 145.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label17: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = '-'
+                TabOrder = 0
+              end
+            end
+            object Rectangle15: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 622.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox7: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                DecimalDigits = 1
+                Value = 0.500000000000000000
+                ValueType = Float
+                KeyboardType = NumbersAndPunctuation
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                HorzIncrement = 0.100000001490116100
+                VertIncrement = 1.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle16: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 503.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox6: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 5.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle17: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 384.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox3: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 2.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+          end
+          object ListBoxItem2: TListBoxItem
+            Position.Y = 80.000000000000000000
+            Size.Width = 741.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            object Rectangle18: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Size.Width = 241.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label18: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                Size.Width = 196.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Trailing
+                Text = 'Helix angle'
+                TabOrder = 0
+              end
+            end
+            object Rectangle19: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Margins.Left = -1.000000000000000000
+              Position.X = 240.000000000000000000
+              Size.Width = 145.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label19: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = '(deg)'
+                TabOrder = 0
+              end
+            end
+            object Rectangle20: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 622.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox8: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 5.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle21: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 503.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox9: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 30.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle22: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 384.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox10: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+          end
+          object ListBoxItem4: TListBoxItem
+            Position.Y = 120.000000000000000000
+            Size.Width = 741.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object Rectangle23: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Size.Width = 241.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label20: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                Size.Width = 196.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Trailing
+                Text = 'Pressure angle'
+                TabOrder = 0
+              end
+            end
+            object Rectangle24: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Margins.Left = -1.000000000000000000
+              Position.X = 240.000000000000000000
+              Size.Width = 145.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label21: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = '(deg)'
+                TabOrder = 0
+              end
+            end
+            object Rectangle25: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 622.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox11: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 2.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle26: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 503.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox12: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 23.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle27: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 384.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox13: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 17.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+          end
+          object ListBoxItem5: TListBoxItem
+            Position.Y = 160.000000000000000000
+            Size.Width = 741.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Rectangle28: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Size.Width = 241.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label22: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                Size.Width = 196.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Trailing
+                Text = 'Pinion tooth number'
+                TabOrder = 0
+              end
+            end
+            object Rectangle29: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Margins.Left = -1.000000000000000000
+              Position.X = 240.000000000000000000
+              Size.Width = 145.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label23: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = '-'
+                TabOrder = 0
+              end
+            end
+            object Rectangle30: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 622.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox14: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 1.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle31: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 503.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox15: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 40.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle32: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 384.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox16: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                Value = 20.000000000000000000
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+          end
+          object ListBoxItem6: TListBoxItem
+            Position.Y = 200.000000000000000000
+            Size.Width = 741.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Rectangle33: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Size.Width = 241.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label24: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                Size.Width = 196.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Trailing
+                Text = 'Pinion profile shift'
+                TabOrder = 0
+              end
+            end
+            object Rectangle34: TRectangle
+              Align = Left
+              Fill.Color = xFF2D2F32
+              Margins.Left = -1.000000000000000000
+              Position.X = 240.000000000000000000
+              Size.Width = 145.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object Label25: TLabel
+                Align = Center
+                StyledSettings = [Family, Style]
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = '(prop mod)'
+                TabOrder = 0
+              end
+            end
+            object Rectangle35: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 622.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox17: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                DecimalDigits = 1
+                Min = -100.000000000000000000
+                Value = 0.100000000000000000
+                ValueType = Float
+                KeyboardType = NumbersAndPunctuation
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                HorzIncrement = 0.100000001490116100
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle36: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 503.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox18: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                DecimalDigits = 1
+                Min = -100.000000000000000000
+                Value = 0.300000000000000000
+                ValueType = Float
+                KeyboardType = NumbersAndPunctuation
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                HorzIncrement = 0.100000001490116100
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+            object Rectangle37: TRectangle
+              Align = Left
+              Fill.Color = xFF4F5E6B
+              Margins.Left = -1.000000000000000000
+              Position.X = 384.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claGray
+              object NumberBox19: TNumberBox
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Cursor = crIBeam
+                DecimalDigits = 1
+                Min = -100.000000000000000000
+                Value = -0.300000000000000000
+                ValueType = Float
+                KeyboardType = NumbersAndPunctuation
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                HorzIncrement = 0.100000001490116100
+                VertIncrement = 1.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+              end
+            end
+          end
+        end
+      end
+      object Line1: TLine
+        LineType = Bottom
+        Position.X = 40.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 970.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF2A7EC5
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 71.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem2'
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Rectangle2: TRectangle
+        Align = Client
+        Fill.Color = xFF2D2F32
+        Size.Width = 1053.000000000000000000
+        Size.Height = 724.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF4F5E6B
+        Stroke.Thickness = 10.000000000000000000
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 71.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem3'
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Rectangle3: TRectangle
+        Align = Client
+        Fill.Color = xFF2D2F32
+        Size.Width = 1053.000000000000000000
+        Size.Height = 724.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF4F5E6B
+        Stroke.Thickness = 10.000000000000000000
+      end
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 71.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem4'
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Rectangle4: TRectangle
+        Align = Client
+        Fill.Color = xFF2D2F32
+        Size.Width = 1053.000000000000000000
+        Size.Height = 724.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF4F5E6B
+        Stroke.Thickness = 10.000000000000000000
+      end
+    end
+  end
+end
